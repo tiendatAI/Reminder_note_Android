@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRemindersActivity"
+    android:background="#E4E3E3">
+
+    <com.example.deadline.DrawView
+        android:id="@+id/draw_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/multiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/draw_view">
+
+        <ImageButton
+            android:id="@+id/refreshImgButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_refresh_24" />
+
+        <ImageButton
+            android:id="@+id/detectImgButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_baseline_check_24" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/titleReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/multiButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Title"
+        android:text="Bài tập"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/descriptionReminder"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleReminder"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Description"
+        android:text="Hoàn thành"
+        android:textColor="@color/black" />
+
+    <Spinner
+        android:id="@+id/spinnerSubjects"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleReminder"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@id/descriptionReminder" />
+
+    <EditText
+        android:id="@+id/datePickerReminder"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionReminder"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="Date"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="true"
+        android:hint="Time"
+        android:layout_toRightOf= "@id/datePickerReminder"
+        android:id="@+id/timePickerReminder"
+        android:layout_below="@id/descriptionReminder"
+        android:textColor="@color/black"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custom_btn_bg"
+        android:text="Add Reminder"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:id="@+id/addReminder"/>
+
+</RelativeLayout>
